@@ -1,0 +1,29 @@
+<h1>Редактирование поста</h1>
+<%= form_with(model: @post, local: true) do |form|  %>
+
+  <p>
+    <%= form.label :line_name %><br>
+    <%= form.text_field :line_name %>
+  </p>
+  
+  <p>
+    <%= form.label :num_tower %><br>
+    <%= form.text_field :num_tower %>
+  </p>
+
+  <p>
+    <%= form.label :main_phone_number %><br>
+    <%= form.text_field :main_phone_number %>
+  </p>
+  
+  <p>
+    <%= form.label :reserve_phone_number %><br>
+    <%= form.text_field :reserve_phone_number %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+<%= link_to 'Назад', posts_path %>

@@ -1,0 +1,16 @@
+<h1>Installed posts</h1>
+<% @posts.each do |post|  %>
+  <div>
+    <strong> <%= post.line_name %> </strong>
+    опора <%= post.num_tower %>
+    <%= link_to 'Изменить', edit_post_path(post) %>
+    <%= link_to 'Удалить', post_path(post), 
+          method: :delete, 
+          data: {confirm: 'Вы уверены?'} %>    
+  </div>
+<% end %>
+<div>
+<p>
+<%= link_to 'Новый пост', new_post_path %>
+</p>
+</div>
