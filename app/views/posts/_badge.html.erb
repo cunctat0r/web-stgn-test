@@ -1,0 +1,9 @@
+<% if !post.measurements.empty? %>
+  <% ff = post.measurements.order('measurements.created_at DESC').first.F0 %>
+  <% if ff > 110.0 %>
+    <span class="badge badge-pill badge-danger">Гололёд</span>
+  <% elsif ff > 100.0 %>
+    <span class="badge badge-pill badge-warning">Отложения</span>
+  <% end%>
+<% end %>
+
