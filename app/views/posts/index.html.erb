@@ -4,7 +4,7 @@
 <h1>Список установленных постов</h1>
 <% @posts.each do |post|  %>
   <div>
-    <span class="glyphicons glyphicons-flash"></span>
+    <%= fa_icon "bolt" %>
     <strong> <%= post.line_name %> </strong>
     опора <%= post.num_tower %>
     <%= link_to 'Подробнее', post_path(post) %> | 
